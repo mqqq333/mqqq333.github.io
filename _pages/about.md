@@ -42,7 +42,7 @@ An ongoing extension of the cross-hemisphere framework that evaluates operator-c
 - **[HemiSpec](https://github.com/mqqq333/HemiSpec)**: An installable toolkit for hemispheric-specificity measures, bilateral reconstruction, ROI export, and validation workflows for structural neuroimaging.
 - **[Cortex Visualization Skill](https://github.com/mqqq333/cortex-visualization-skill)** and **[Subcortex Visualization Skill](https://github.com/mqqq333/subcortex-visualization-skill)**: Reproducible atlas-based cortical and subcortical visualization workflows.
 - **[DecodeWM](https://github.com/mqqq333/DecodeWM)**: A working-memory load prediction project using HCP task-fMRI data and machine-learning models.
-- **[LorewormGu](https://github.com/mqqq333/LorewormGu)**: An from-scratch language-model implementation covering pretraining, supervised fine-tuning, and reasoning-format distillation.
+- **[LorewormGu](https://github.com/mqqq333/LorewormGu)**: A from-scratch language-model implementation covering pretraining, supervised fine-tuning, and reasoning-format distillation.
 
 ## Education
 
