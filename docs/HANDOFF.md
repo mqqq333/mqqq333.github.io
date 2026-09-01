@@ -62,7 +62,7 @@ bundle exec jekyll build
   2. Cross-hemisphere reconstruction and handedness：研究重建残差与利手性的关系，状态为 `in preparation`。
   3. Operator-corrector validation of residual measures：跨人口学、行为和疾病场景验证校正残差，状态为 `in preparation`。
 - Projects 当前包括 HemiSpec、Cortex Visualization Skill、Subcortex Visualization Skill、DecodeWM 和 LorewormGu。
-- Writing：`阿瞒的脑洞` 是个人公众号；列出的三篇英文文章属于 `工心应援会`。
+- Writing：`阿瞒的脑洞` 是个人公众号；当前两个页面均只保留该公众号的简介，不再列出 `工心应援会` 或文章清单。
 - TOEFL 固定写法：`TOEFL iBT: 5/6 (100/120)`。
 - CV 下载文件：`files/MAQi_CV_en.pdf` 和 `files/MAQi_resume_cn.pdf`。简历源文件在仓库外；如需重新生成，原始工作目录曾为 `C:\Users\mqqq3333\Desktop\my_info\resume-master`，不要把该目录整体复制进仓库。
 - 目前没有 Google Scholar 链接，不要自行编造账号或统计。
@@ -177,7 +177,7 @@ rg -n -i "leetcode|file://|[A-Z]:\\|github-contribution-grid-snake" README.md
 - banner raw URL
 - GitHub Stats endpoint
 - 四个 shields.io badge URL
-- homepage、实验室和三个公众号文章链接
+- homepage 和实验室链接，以及页面中仍保留的其他公开链接
 
 提交时只加入目标文件：
 

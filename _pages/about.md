@@ -65,12 +65,6 @@ An ongoing extension of the cross-hemisphere framework that evaluates operator-c
 
 I operate **阿瞒的脑洞 (A Man's Brainhole)**, a public WeChat channel about brain science, computational neuroscience, NeuroAI, research tools, and reproducible workflows.
 
-Selected articles published on the WeChat account **工心应援会** include:
-
-- [AI-assisted interaction and user experience](https://mp.weixin.qq.com/s/6bb3bIRYIP8NR8d97EuBmw)
-- [How affective computing systems shape user experience](https://mp.weixin.qq.com/s/kxHH7hxd9WSx3Zp2OCkWkg)
-- [Human--AI collaboration and more empathic dialogue](https://mp.weixin.qq.com/s/h0Gb03j-ZU-f5NF96A-bPw)
-
 <span class="anchor" id="cv"></span>
 
 ## <i class="fas fa-fw fa-file-alt section-icon section-icon--cv" aria-hidden="true"></i> CV
