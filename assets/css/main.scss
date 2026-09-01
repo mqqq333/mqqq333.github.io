@@ -122,7 +122,30 @@ h1:before {
 }
 
 .masthead {
-    border-bottom: 3px solid $link-color;
+    // Keep the original border footprint while the visible rule follows the page grid.
+    border-bottom: 3px solid transparent;
+
+    &__inner-wrap {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            left: 1em;
+            right: 1em;
+            bottom: -3px;
+            height: 3px;
+            background: $link-color;
+            pointer-events: none;
+        }
+
+        @include breakpoint($large) {
+            &::before {
+                left: calc(1em - 0.75rem);
+            }
+        }
+    }
 }
 
 .greedy-nav {
