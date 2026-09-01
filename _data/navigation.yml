@@ -20,3 +20,9 @@ main:
 
   - title: "CV"
     url: "/#cv"
+
+  - title: "Skills"
+    url: "/#skills"
+
+  - title: "Languages"
+    url: "/#languages"

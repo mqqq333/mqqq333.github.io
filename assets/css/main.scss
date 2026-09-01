@@ -87,14 +87,140 @@
 
 }
 
-$scroll_offset : 2em;
-h1:before, .anchor:before { 
+$scroll_offset : 4em;
+h1:before {
     content: ''; 
     display: block; 
     position: relative; 
     width: 0; 
     height: $scroll_offset; 
     margin-top: -$scroll_offset;
+}
+
+.anchor {
+    display: block;
+    height: 0;
+    position: relative;
+    top: -$scroll_offset;
+    visibility: hidden;
+}
+
+.section-icon {
+    margin-right: 0.25em;
+
+    &--news,
+    &--writing { color: $accent-community; }
+
+    &--research,
+    &--cv { color: $accent-research; }
+
+    &--projects { color: $accent-projects; }
+
+    &--education,
+    &--skills,
+    &--languages { color: $accent-meta; }
+}
+
+.masthead {
+    border-bottom: 3px solid $link-color;
+}
+
+.greedy-nav {
+    .visible-links a:before {
+        height: 3px;
+        background: $link-color;
+    }
+
+    .hidden-links a:hover {
+        background: $surface-muted;
+    }
+}
+
+.page__content {
+    > h2.section-heading {
+        position: relative;
+        margin-top: 1.75em;
+        padding-bottom: 0.45em;
+        border-bottom: 1px solid $border-color;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 28px;
+            height: 3px;
+            background: $accent-research;
+        }
+    }
+
+    > h2.section-heading--news::after,
+    > h2.section-heading--writing::after {
+        background: $accent-community;
+    }
+
+    > h2.section-heading--projects::after {
+        background: $accent-projects;
+    }
+
+    > h2.section-heading--education::after,
+    > h2.section-heading--skills::after,
+    > h2.section-heading--languages::after {
+        background: $accent-meta;
+    }
+
+    a {
+        color: $link-color;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.15em;
+
+        &:hover {
+            color: $link-color-hover;
+            text-decoration-thickness: 2px;
+        }
+
+        &:focus-visible {
+            outline: 3px solid rgba($accent-research, 0.45);
+            outline-offset: 2px;
+        }
+    }
+}
+
+.profile_box {
+    @include breakpoint($large) {
+        margin: 0 -0.75rem;
+        padding: 0.75rem;
+        background: $surface-muted;
+        border-left: 3px solid $accent-research;
+    }
+}
+
+.author__bio {
+    padding-left: 0.6rem;
+    border-left: 3px solid $accent-research;
+}
+
+.author__urls,
+.author__urls_sm {
+    .fa-map-marker { color: $accent-meta; }
+    .fa-link { color: $accent-research; }
+    .fa-envelope { color: $accent-community; }
+    .fa-github { color: $github-color; }
+}
+
+.author__urls a:hover,
+.author__urls_sm a:hover {
+    color: $link-color-hover;
+    text-decoration: none;
+}
+
+.author__link-icon {
+    width: 1em !important;
+    height: 1em;
+    margin-right: 0.25em;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: -0.125em;
 }
 
 .badge {

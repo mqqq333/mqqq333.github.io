@@ -23,9 +23,8 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "MA Qi"
   avatar           : "images/photo.png"
-  bio              : "Research Assistant, Cognomics Lab, Zhejiang University"
-  location         : "Hangzhou, Zhejiang, China"
-  employer         : "Cognomics Lab, Zhejiang University"
+  bio              : "Research Assistant, Cognomics Lab, Zhejiang Uni."
+  location         : "Hangzhou, China"
   pubmed           : 
   googlescholar    :
   email            : "maqi316101@gmail.com"
@@ -38,6 +37,8 @@ author:
   facebook         :
   foursquare       :
   github           : "mqqq333"
+  lab_github       : "https://github.com/cognomicslab"
+  lab_icon         : "images/lab_icon.png"
   google_plus      :
   keybase          :
   instagram        :
