@@ -8,7 +8,7 @@
 
 | 页面 | 本地工作树 | 远端仓库 | 分支 | 当前公开版本 | 地址 |
 | --- | --- | --- | --- | --- | --- |
-| Academic homepage | `E:\mqqq333.github.io` | `git@github.com:mqqq333/mqqq333.github.io.git` | `master` | `f3863d6`（本 handoff 提交；页面源码行为基线为 `8d18178842c24d49e865990acdb3bfe2fbd53265`） | <https://mqqq333.github.io> |
+| Academic homepage | `E:\mqqq333.github.io` | `git@github.com:mqqq333/mqqq333.github.io.git` | `master` | 当前 HEAD 以 `git log -1` 为准；页面源码行为基线为 `8d18178842c24d49e865990acdb3bfe2fbd53265` | <https://mqqq333.github.io> |
 | GitHub profile | `E:\mqqq333-profile`（homepage 仓库的同级目录） | `https://github.com/mqqq333/mqqq333.git` | `master` | `f373e70bcddd5c33f4a6ca13b6cd7d2aa02e91cc` | <https://github.com/mqqq333> |
 
 当前本地状态：
