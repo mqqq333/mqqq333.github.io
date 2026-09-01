@@ -152,6 +152,15 @@ git diff --check
 bundle exec jekyll build
 ```
 
+当前这台 Windows 环境的 `Gemfile` 声明了 `wdm (~> 0.1.0)`，但本机未安装该 gem，所以 `bundle exec jekyll build` 目前会在依赖解析阶段失败。已验证的临时替代命令是：
+
+```powershell
+$env:JEKYLL_NO_BUNDLER_REQUIRE = '1'
+jekyll build
+```
+
+替代构建在本轮成功；输出中的 Sass deprecation warning 来自旧模板依赖，不是本 handoff 文档引入的错误。长期修复应在依赖允许时补齐 `wdm`，不要把环境变量写进页面源码。
+
 然后在本地或线上检查：banner、侧栏头像和 lab icon、所有彩色分区图标、News 顺序、CV 链接、移动端换行，以及顶部蓝线和内容列宽。
 
 Profile 修改后至少执行：
