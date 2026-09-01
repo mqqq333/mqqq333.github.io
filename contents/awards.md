@@ -1,1 +1,0 @@
-- Outstanding Member of the Student Union, Department of Psychology and Behavioral Sciences, Zhejiang University

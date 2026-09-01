@@ -1,2 +1,6 @@
 *.DS_Store
 
+github-recovery-codes.txt
+_site/
+.omx/
+run_server.sh

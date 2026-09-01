@@ -1,6 +1,0 @@
-- Hemispheric-Specific Brain Modeling and Analysis Based on Generative Adversarial Networks--**Asymmetric-GAN**.(2024.10-Present)[[Code]](https://github.com/mqqq333/Asymmetric-GAN)
-- From 0 to 1 on Large Language Models--**LorewormGu**.(2024.12-Present)[[Code]](https://github.com/mqqq333/LorewormGu)
-- Decoding Working Memory: A Predictive Model of Memory Loads in the N-Back Task--**DecodeWM**.(2023.06-2023.09)[[Code]](https://github.com/mqqq333/DecodeWM)
-- WeChat Tweets:工心应援会-AI 的启动信念影响人-AI 交互，改善用户体验.(2024.05.20)[[Link]](https://mp.weixin.qq.com/s/6bb3bIRYIP8NR8d97EuBmw)
-- WeChat Tweets:工心应援会-情感计算系统如何影响用户体验？.(2024.04.26)[[Link]](https://mp.weixin.qq.com/s/kxHH7hxd9WSx3Zp2OCkWkg)
-- WeChat Tweets:工心应援会-人与 AI 的协作能实现更具同理心的对话.(2024.04.02)[[Link]](https://mp.weixin.qq.com/s/h0Gb03j-ZU-f5NF96A-bPw)
