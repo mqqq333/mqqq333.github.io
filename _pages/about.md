@@ -31,7 +31,7 @@ I build reproducible research workflows and software for neuroimaging analysis, 
 
 ### Cross-Hemisphere Reconstruction-Derived Neuroanatomical Specificity in Schizophrenia
 
-An ongoing multicenter structural MRI study of 948 participants across five sites that uses a pretrained Asy-GAN model to derive ANS and RNS measures of neuroanatomical specificity. The study evaluates multiscale group differences, clinical and cognitive associations, and schizophrenia classification using mixed-effects modeling, repeated cross-validation, leave-one-site-out validation, and permutation testing. ANS significantly outperformed conventional GMV asymmetry in matched classification analyses (Delta AUC = 0.086; FDR-adjusted q = 0.00051). The accompanying manuscript is **in preparation**.
+Multicenter structural MRI analysis of 948 participants across five sites using ANS and RNS. The study examines multiscale group differences, clinical and cognitive associations, and disease classification; the manuscript is **in preparation**.
 
 ### Cross-hemisphere reconstruction and handedness
 
