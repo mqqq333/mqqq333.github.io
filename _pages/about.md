@@ -63,7 +63,22 @@ An ongoing extension of the cross-hemisphere framework that evaluates operator-c
 ## <i class="fas fa-fw fa-pen section-icon section-icon--writing" aria-hidden="true"></i> Writing
 {: .section-heading .section-heading--writing}
 
-I operate **阿瞒的脑洞 (A Man's Brainhole)**, a public WeChat channel about brain science, computational neuroscience, NeuroAI, research tools, and reproducible workflows.
+<div class="wechat-card" aria-labelledby="wechat-card-title">
+  <div class="wechat-card__identity">
+    <img class="wechat-card__avatar" src="{{ '/images/aman_brainhole_favicon.png' | relative_url }}" alt="阿瞒的脑洞 (A Man's Brainhole) account avatar" width="96" height="96" loading="lazy">
+    <div>
+      <p class="wechat-card__label">WeChat Official Account</p>
+      <h3 id="wechat-card-title">阿瞒的脑洞 <span>(A Man's Brainhole)</span></h3>
+      <p class="wechat-card__description">A public channel about brain science, computational neuroscience, NeuroAI, research tools, and reproducible workflows.</p>
+    </div>
+  </div>
+  <div class="wechat-card__follow">
+    <div class="wechat-card__qr-frame">
+      <img class="wechat-card__qr" src="{{ '/images/aman_brainhole_qr.png' | relative_url }}" alt="QR code to follow the WeChat Official Account 阿瞒的脑洞 (A Man's Brainhole)" width="240" height="240" loading="lazy">
+    </div>
+    <p>Scan with WeChat to follow</p>
+  </div>
+</div>
 
 Selected articles published on the WeChat account **工心应援会** include:
 

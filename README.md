@@ -20,6 +20,9 @@ and `_data/navigation.yml`.
 
 - `images/background.jpeg` is the responsive Zhejiang University campus banner.
 - `images/photo.png` is the homepage avatar.
+- `images/aman_brainhole_favicon.png` is the public avatar for the WeChat account
+  **阿瞒的脑洞 (A Man's Brainhole)**.
+- `images/aman_brainhole_qr.png` is the official follow QR code for that account.
 - `files/` contains the public English and Chinese CV PDFs.
 - Only allowlisted, public WeChat branding assets are included; credentials,
   browser data, temporary files, and unpublished working materials are excluded.
