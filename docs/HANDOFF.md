@@ -1,19 +1,54 @@
 # MA Qi Homepage and Profile Handoff
 
-更新时间：2026-09-01（Asia/Shanghai）
+更新时间：2026-09-05（Asia/Shanghai）
 
 这份文档是下一次继续修改个人 homepage 和 GitHub profile README 时的入口。先阅读本文件，再检查两个仓库的工作树；不要根据记忆重建内容。
 
+## 0. 2026-09-02 至 2026-09-04 更新摘要
+
+- 旧模板主页已作为 detached Git worktree 恢复到 `E:\mqqq333-old-homepage`，当前提交为 `f8b850471beeceb6c1ad19e6357c6d1e41e62899`。它只用于本地截图和新旧页面对比，不是第三个发布仓库；不要在其中提交或推送新的主页改动。
+- schizophrenia 研究项目的 homepage 描述已改成与 profile 一致的简洁版本，不再在首页展开分类结果数字。对应 homepage 提交为 `eb5113ad62c23ffb200738a873c405b0622cc001`。
+- `阿瞒的脑洞 (A Man's Brainhole)` 已在 homepage Writing 分区以静态卡片展示头像、介绍和官方关注二维码；GitHub Profile 使用较简洁的二维码和 homepage 链接。两边均未增加脚本、iframe、RSS、爬虫或第三方运行时。已部署提交分别为 homepage `54266c3359bfd33c5037bbd953be084bce022e5d`、profile `07f6cf9c58eac253447fb0cdd888f15142c0187a`。
+- homepage 中原有的三篇文章继续明确归属于 `工心应援会`，位于 `阿瞒的脑洞` 卡片之外；不要把两个公众号的内容归属合并。
+- 曾评估在 homepage/profile 展示“高阅读量文章”。测试链接 <https://mp.weixin.qq.com/s/NfqtEqxqo4DavqsuyvZaRw> 对应 `阿瞒的脑洞` 文章《心理学越接近统一，越需要保留差异？AI 时代的 Nexus 与 Babel》（2026-09-04 10:00）；公开标题、公众号、日期、简介和封面可以读取，但公开页面不提供真实阅读量。用户随后决定取消这一扩展，因此当前不新增精选文章区、不展示该链接，也不接入阅读量接口。若未来重新提出，需要作为新需求重新确认范围；不得把 WeChat `AppSecret`、`access_token`、cookie 或后台凭据放入 GitHub Pages/Profile。
+
+## 0.1 2026-09-05 Homepage 审阅建议（仅保存，未执行）
+
+本次只审阅 homepage，没有修改 homepage/profile 源码，也没有新的提交或部署。审阅依据包括当前 homepage 源码、线上 HTML、现有截图和公开链接检查。主页、两份 CV、banner、二维码、五个项目仓库、Cognomics Lab 和 Kong lab 链接本次检查均返回 HTTP 200；这只代表可访问，不代表外部页面内容永久不变。当前浏览器连接不可用，执行时仍需重新做 1440px、768px 和 390px 的视觉检查；现有 9 月 1 日截图早于公众号卡片提交，不能替代最新移动端截图。
+
+### 第一批：建议优先修正
+
+1. **停用空配置的 Google Analytics。** `_includes/analytics.html:1-10` 只要页面没有显式关闭 analytics 就会加载脚本，而 `_config.yml:15` 的 `google_analytics_id` 为空；线上 HTML 已实际请求带空 ID 的 Google Tag Manager。建议仅在 ID 非空时渲染统计代码，或直接移除该 include。默认不应向访客发起无用途的第三方统计请求。
+2. **补齐移动端和图标链接的可访问名称。** `_includes/masthead.html:5` 的菜单按钮只有装饰性 `div`；`_includes/author-profile.html:119-163` 的移动端 Website、Email、GitHub 等链接只有被 `aria-hidden` 的图标。建议给菜单按钮添加 `aria-label`、`aria-expanded`、`aria-controls`，给每个图标链接添加明确标签，并复测键盘和屏幕阅读器可达性。
+3. **补一个主内容 H1。** `_pages/about.md:14` 直接从介绍段落开始，`_layouts/default.html:20-25` 不会自动生成标题，线上页面当前没有 `<h1>`。建议在正文介绍开头加入唯一的 `MA Qi` H1，保留侧栏姓名作为紧凑身份信息，不把 H1 做成宣传式大标题。
+4. **减轻首屏横幅资源。** `_pages/about.md:9` 使用的 `images/background.jpeg` 当前约 4093×1666、1.71 MB，而桌面和手机只显示约 360px/220px 高度。建议生成保持构图的压缩 WebP 或其他现代格式，并用 `srcset`/`sizes` 或等价的响应式资源选择；执行时比较桌面和移动端裁切，不直接删除原图，除非确认没有其他引用。
+5. **修正重复 `<head>` 和全局新标签页策略。** `_includes/head.html:17-19` 在已有 `<head>` 内嵌套了第二个 `<head>`，并用 `<base target="_blank">` 影响所有链接。建议移除嵌套 head 和全局 base；站内锚点保持当前页，只有确需另开的外部链接显式设置 `target="_blank"` 并补 `rel="noopener"`，CV 链接按实际下载意图单独决定是否使用 `download`。
+
+### 第二批：内容和信息架构建议
+
+6. **让两个公众号的归属在视觉上更分明。** `_pages/about.md:66-87` 目前事实表述正确，但 `阿瞒的脑洞` 卡片后紧接着 `工心应援会` 文章列表，访客快速扫读时仍可能混淆。建议给文章列表增加清晰的 `工心应援会` 小标题或独立标签；保留两个账号分离，也不要恢复已取消的高阅读量文章区。
+7. **精简顶部导航层级。** `_data/navigation.yml:3-28` 的 `About Me` 与 masthead 的 `Homepage` 都指向同一 `#about-me`，九个入口也把 Research、Writing 和只有 TOEFL 一行的 Languages 放在同一层级。建议保留约 4--6 个主要入口（About、Research、Projects、Writing、CV），其余内容仍留在长页或作为次级入口；这是信息架构建议，不要求重写模板。
+8. **突出最能代表你的公开项目。** `_pages/about.md:49-52` 当前四个项目都是同等权重的文字列表。建议优先突出 HemiSpec 和脑可视化工具，并在已有公开许可的前提下增加一张真实输出图或明确 demo 链接；不要为了装饰新增未确认公开的材料。
+9. **统一 Languages/Skills 的含义。** homepage 的 `Languages`（`_pages/about.md:104-109`）目前只有 TOEFL，而 profile 将编程徽章放在 Languages、把 TOEFL 放在 Education and Skills。建议将 TOEFL 移入 Education 或把该区改名为 `English Proficiency`，技术徽章另命名为 `Technical Stack`；如调整 profile，仍以 homepage 为长版源头同步。
+10. **让 News 只承载明确的时间线事件。** `_pages/about.md:23-25` 的 `2026: Developing HemiSpec...` 更像当前工作概述，不像有日期的新闻。建议提供具体月份/里程碑后再保留，或移到 Research/Projects；没有用户确认的日期时不要自行补写。
+
+### 建议执行顺序和边界
+
+- 用户明确说“执行”后，先把选定批次写成短计划并交 Claude 审阅，再修改；本节当前只是备忘，不代表已获执行授权。
+- 默认先做第一批 1--5，再单独决定第二批 6--10；每批修改后运行 Jekyll 构建、HTML 结构检查、公开链接检查和桌面/移动端截图。
+- 本方案不包含更换模板、重启高阅读量公众号文章展示、接入 RSS/爬虫/动态 WeChat API、恢复 Delta AUC/q 值，或自动修改 profile 的无关内容。
+- 若只执行 homepage 技术修正，profile 不需要同步；只有导航名称、个人事实或可见内容发生变化时，才按两边同步字段规则单独修改 profile。
+
 ## 1. 当前状态
 
-| 页面 | 本地工作树 | 远端仓库 | 分支 | 当前公开版本 | 地址 |
+| 页面 | 本地工作树 | 远端仓库 | 分支 | 当前内容基线 | 地址 |
 | --- | --- | --- | --- | --- | --- |
-| Academic homepage | `E:\mqqq333.github.io` | `git@github.com:mqqq333/mqqq333.github.io.git` | `master` | 当前 HEAD 以 `git log -1` 为准；页面源码行为基线为 `8d18178842c24d49e865990acdb3bfe2fbd53265` | <https://mqqq333.github.io> |
-| GitHub profile | `E:\mqqq333-profile`（homepage 仓库的同级目录） | `https://github.com/mqqq333/mqqq333.git` | `master` | `f373e70bcddd5c33f4a6ca13b6cd7d2aa02e91cc` | <https://github.com/mqqq333> |
+| Academic homepage | `E:\mqqq333.github.io` | `git@github.com:mqqq333/mqqq333.github.io.git` | `master` | `54266c3359bfd33c5037bbd953be084bce022e5d` | <https://mqqq333.github.io> |
+| GitHub profile | `E:\mqqq333-profile`（homepage 仓库的同级目录） | `https://github.com/mqqq333/mqqq333.git` | `master` | `07f6cf9c58eac253447fb0cdd888f15142c0187a` | <https://github.com/mqqq333> |
 
 当前本地状态：
 
-- homepage 还有未跟踪的 `.chrome-tmp/` 和 `online-profile.png`，它们是浏览器验证产物；不要自动加入提交，也不要未经确认删除。
+- homepage 还有未跟踪的 `.chrome-tmp/`、`images/wechat_QRCode.jpg` 和 `online-profile.png`。其中 `.chrome-tmp/` 是浏览器验证数据，`images/wechat_QRCode.jpg` 是用户提供的二维码源文件，`online-profile.png` 是截图；不要自动加入提交，也不要未经确认删除。
 - `.omx/`、`.jekyll-cache/`、`_site/`、`test-results/` 等属于生成或运行目录，保持忽略状态。
 - profile 工作树在最后一次推送后是干净的。
 - homepage 本地 Jekyll 服务目前没有作为长期服务运行。
@@ -58,11 +93,11 @@ bundle exec jekyll build
 - 研究主线：计算神经科学、结构神经影像、脑半球偏侧化、跨半球重建和生成模型。
 - News 按从新到旧排列；当前条目包括 2026、Jul 2025 加入 Cognomics Lab、Jul 2025 完成浙江大学心理学学士学位。
 - Research 当前有三个项目：
-  1. Cross-Hemisphere Reconstruction-Derived Neuroanatomical Specificity in Schizophrenia：5 个站点、948 名受试者、ANS/RNS、混合效应模型和分类验证；结果稿为 `in preparation`。
+  1. Cross-Hemisphere Reconstruction-Derived Neuroanatomical Specificity in Schizophrenia：homepage 和 profile 均使用简洁表述，即 5 个站点、948 名受试者、ANS/RNS、多尺度组间差异、临床及认知关联和疾病分类；稿件状态为 `in preparation`。不要自行恢复主页此前展开的 Delta AUC 和 q 值。
   2. Cross-hemisphere reconstruction and handedness：研究重建残差与利手性的关系，状态为 `in preparation`。
   3. Operator-corrector validation of residual measures：跨人口学、行为和疾病场景验证校正残差，状态为 `in preparation`。
 - Projects 当前包括 HemiSpec、Cortex Visualization Skill、Subcortex Visualization Skill、DecodeWM 和 LorewormGu。
-- Writing：homepage 保留 `阿瞒的脑洞` 的介绍，以及 `工心应援会` 的三篇英文文章清单；profile 是缩写版，只保留 `阿瞒的脑洞` 介绍。
+- Writing：homepage 使用静态卡片展示 `阿瞒的脑洞` 的头像、简介、官方关注二维码和扫码说明；卡片下方继续保留明确归属于 `工心应援会` 的三篇英文文章清单。profile 是缩写版，展示 `阿瞒的脑洞` 简介、180px 二维码、扫码说明和 homepage Writing 锚点链接，不展示 `工心应援会` 清单。
 - TOEFL 固定写法：`TOEFL iBT: 5/6 (100/120)`。
 - CV 下载文件：`files/MAQi_CV_en.pdf` 和 `files/MAQi_resume_cn.pdf`。简历源文件在仓库外；如需重新生成，原始工作目录曾为 `C:\Users\mqqq3333\Desktop\my_info\resume-master`，不要把该目录整体复制进仓库。
 - 目前没有 Google Scholar 链接，不要自行编造账号或统计。
@@ -76,6 +111,7 @@ bundle exec jekyll build
 - `images/lab_icon.png`：Cognomics Lab 侧栏链接图标，来源为用户提供的 lab icon。
 - `images/favicon.ico`、`favicon-16x16.png`、`favicon-32x32.png`、`apple-touch-icon.png`、`site.webmanifest`：网站图标配置。
 - `images/aman_brainhole_favicon.png`：公众号相关 favicon 资源。
+- `images/aman_brainhole_qr.png`：`阿瞒的脑洞` 官方关注二维码，已公开并由 homepage 和 profile 共用；profile 通过 `https://mqqq333.github.io/images/aman_brainhole_qr.png` 引用。
 
 当前视觉规则：
 
@@ -117,6 +153,7 @@ profile 仓库只有一个主要入口：`README.md`。它是 homepage 的缩写
 - LeetCode Stats 已删除。
 - README 中的 contribution snake 引用已删除；profile 仓库里仍保留 `assets/github-contribution-grid-snake.svg` 和 `.gif` 文件，但它们不再显示。只有在用户明确要求清理仓库资产时才删除文件。
 - GitHub 自带的 contribution graph 已经足够，不要为了恢复旧 snake 图增加新的外链。
+- Writing 分区使用 GitHub 支持的基础 HTML：居中的 180px 二维码、可见扫码说明和指向 `https://mqqq333.github.io/#writing` 的非扫码入口。不要加入自定义 CSS、JavaScript、iframe 或动态公众号组件。
 
 ## 7. 两边需要同步的字段
 
@@ -193,12 +230,14 @@ git push origin master
 
 - Stats endpoint 是第三方服务，存在未来失效或限流风险；替换前先测试新的 endpoint，并保留一个可回退方案。
 - banner 使用外部 Images 仓库的固定 commit；如果源图迁移，先更新 URL，再验证图片类型和裁切。
-- `wechat_channel.jpg` 二维码目前不在 homepage 仓库中；用户曾提供过本地来源，但没有把它作为当前公开资源。若未来添加，先确认公开授权、文件位置和移动端尺寸。
+- `images/aman_brainhole_qr.png` 是当前发布中的官方关注二维码；用户提供的源文件 `images/wechat_QRCode.jpg` 仍为未跟踪文件，不要加入提交。以后替换二维码时使用新的版本化文件名，并同时更新 homepage/profile，避免 GitHub 图片代理缓存旧图。
 - 公众号 favicon 已纳入网站，但不要把本地公众号项目目录整体复制进网页仓库。
+- “高阅读量/精选文章”扩展已由用户取消，不是待办。公开微信公众号文章页通常能提供标题、日期、公众号、简介和封面，但不提供可验证的真实阅读量；不要为此增加抓取脚本、RSS 服务或前端 API。官方数据接口需要服务端凭据，也不适合静态 GitHub Pages/Profile。
+- `E:\mqqq333-old-homepage` 是同一 homepage 仓库的 detached worktree，仅用于旧模板截图对比。不要把它复制进当前仓库，也不要从该 worktree 推送或覆盖 `master`。
 - CV 是二进制文件，修改 TOEFL 或教育日期时要同步检查英文和中文 PDF，再检查下载链接。
 - 研究日期、`in preparation` 状态和 News 年份需要用户确认后再更新；不要自行把未发表工作写成已发表。
 - Claude 之前提出过的可选建议包括评估 anime 头像、减少侧栏与正文重复链接、统一图标色彩，以及增加 hosted-build smoke verification；这些不是当前必做项。
-- 不要提交 `github-recovery-codes.txt`、`.chrome-tmp/`、浏览器截图或其他临时文件。
+- 不要提交 `github-recovery-codes.txt`、`.chrome-tmp/`、`images/wechat_QRCode.jpg`、浏览器截图或其他临时文件。
 
 ## 10. 相关审阅记录
 
@@ -208,6 +247,9 @@ git push origin master
 - `.omx/artifacts/ask-claude-acad-homepage-plan-review-20260901.md`
 - `.omx/artifacts/profile-readme-plan-20260901.md`
 - `.omx/artifacts/claude-review-the-proposed-plan-in-e-mqqq333-github-io-omx-artifact-2026-09-01T14-14-21-295Z.md`
+- `.omx/plans/wechat-official-account-showcase.md`
+- `.omx/artifacts/claude-review-the-implementation-plan-at-e-mqqq333-github-io-omx-pl-2026-09-04T14-03-49-512Z.md`
+- `.omx/artifacts/claude-re-review-the-revised-plan-at-e-mqqq333-github-io-omx-plans--2026-09-04T14-10-24-028Z.md`
 
 下次开始时，优先执行：
 
