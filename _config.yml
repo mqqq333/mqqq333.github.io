@@ -6,8 +6,8 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "MA Qi | Computational Neuroscience"
-description              : "Research assistant in computational neuroscience, neuroimaging, and research software at Zhejiang University."
+title                    : "MA Qi | Computational Neuroscience & Linguistics"
+description              : "Incoming M.A. student in Computational Linguistics at Heidelberg University (winter semester 2026/27), with research experience in computational neuroscience and neuroimaging."
 repository               : "mqqq333/mqqq333.github.io"
 google_scholar_stats_use_cdn : false
 
@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "MA Qi"
   avatar           : "images/photo.png"
-  bio              : "Research Assistant, Cognomics Lab, Zhejiang Uni."
+  bio              : "Incoming M.A. Student in Computational Linguistics, Heidelberg University."
   location         : "Hangzhou, China"
   pubmed           : 
   googlescholar    :

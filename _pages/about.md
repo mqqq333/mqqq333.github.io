@@ -11,7 +11,9 @@ author_profile: true
 
 <span class="anchor" id="about-me"></span>
 
-I am **MA Qi (马琦)**, a research assistant at the [Cognomics Lab](https://github.com/cognomicslab), Zhejiang University, led by [Xiang-Zhen Kong (孔祥祯)](https://person.zju.edu.cn/konglab). My work sits at the intersection of **computational neuroscience, structural neuroimaging, brain hemispheric lateralization, and generative modeling**.
+I am **MA Qi (马琦)**, an incoming **M.A. student in Computational Linguistics** at [Heidelberg University](https://www.uni-heidelberg.de/en/study/all-subjects/computational-linguistics/computational-linguistics-master), starting in the **winter semester 2026/27**.
+
+I currently work as a research assistant at the [Cognomics Lab](https://github.com/cognomicslab), Zhejiang University, led by [Xiang-Zhen Kong (孔祥祯)](https://person.zju.edu.cn/konglab). My work sits at the intersection of **computational neuroscience, structural neuroimaging, brain hemispheric lateralization, and generative modeling**.
 
 I build reproducible research workflows and software for neuroimaging analysis, with an emphasis on interpretable validation, careful statistical testing, and tools that other researchers can install and reuse.
 
@@ -20,6 +22,7 @@ I build reproducible research workflows and software for neuroimaging analysis, 
 ## <i class="fas fa-fw fa-newspaper section-icon section-icon--news" aria-hidden="true"></i> News
 {: .section-heading .section-heading--news}
 
+- *Sep 2026*: Admitted to the M.A. in Computational Linguistics at Heidelberg University for the winter semester 2026/27.
 - *2026*: Developing HemiSpec and related cortical/subcortical visualization workflows for reproducible neuroimaging research.
 - *Jul 2025*: Joined the Cognomics Lab at Zhejiang University as a research assistant.
 - *Jul 2025*: Completed a Bachelor of Science in Psychology at Zhejiang University.
@@ -56,6 +59,7 @@ An ongoing extension of the cross-hemisphere framework that evaluates operator-c
 ## <i class="fas fa-fw fa-graduation-cap section-icon section-icon--education" aria-hidden="true"></i> Education
 {: .section-heading .section-heading--education}
 
+- **[Heidelberg University](https://www.uni-heidelberg.de/en/study/all-subjects/computational-linguistics/computational-linguistics-master)**, Master of Arts (M.A.) in Computational Linguistics, Heidelberg, Germany. Incoming, winter semester 2026/27.
 - **Zhejiang University**, Bachelor of Science in Psychology, Hangzhou, China, Sep 2021--Jul 2025.
 
 <span class="anchor" id="writing"></span>

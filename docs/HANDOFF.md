@@ -1,8 +1,17 @@
 # MA Qi Homepage and Profile Handoff
 
-更新时间：2026-09-05（Asia/Shanghai）
+更新时间：2026-10-02（Asia/Shanghai）
 
 这份文档是下一次继续修改个人 homepage 和 GitHub profile README 时的入口。先阅读本文件，再检查两个仓库的工作树；不要根据记忆重建内容。
+
+## 2026-10-02 海德堡大学录取信息更新
+
+- 用户确认将赴海德堡大学就读计算语言学。用户指定材料目录中的录取通知书 `admission_letter.pdf` 确认项目为 Computational Linguistics，入学学期为 winter semester 2026/27，录取日期为 2026-09-11；[大学官方项目页](https://www.uni-heidelberg.de/en/study/all-subjects/computational-linguistics/computational-linguistics-master) 确认学位为 Master of Arts（M.A.）。
+- 本次更新 homepage 的简介、News、Education、侧栏身份和站点标题/描述，并同步 profile 的顶部身份、About 和 Education。统一使用 `incoming` / `will join`，不要仅凭录取通知书写成已经入学、已经搬至德国或已离开 Cognomics Lab。
+- 录取通知书仅用于核对，不复制到公开仓库。公开内容不含申请编号、私人地址、入学手续或本地材料路径。
+- 两份公开 CV PDF 暂未重生成；当前简历工作目录中的 PDF 文本与公开版本已有其他差异，后续同步时先审阅源稿，避免连带公开无关更新。
+- 验证：使用下述 `JEKYLL_NO_BUNDLER_REQUIRE=1` 替代命令构建成功；YAML/front matter、生成页面中的简介/News/教育/Open Graph 元信息、两仓库字段一致性及相关链接检查通过。浏览器连接当前不可用，桌面和移动端视觉检查未完成。
+- 发布授权：用户于 2026-10-02 明确要求“上线”，授权提交并推送 homepage 和 GitHub Profile。发布后以线上页面核对为准，不将推送成功直接等同于部署完成。
 
 ## 0. 2026-09-02 至 2026-09-04 更新摘要
 
@@ -87,11 +96,12 @@ bundle exec jekyll build
 ## 4. Homepage 内容事实
 
 - 姓名：`MA Qi (马琦)`。
-- 当前简介：Research Assistant, Cognomics Lab, Zhejiang Uni.。
+- 当前侧栏身份：Incoming M.A. Student in Computational Linguistics, Heidelberg University.；正文仍保留当前 Cognomics Lab research assistant 经历。
 - 正文介绍中保留 Cognomics Lab 和 Xiang-Zhen Kong (孔祥祯) 的链接；profile 中不放单独的 `PI:` 行。
-- 位置：`Hangzhou, China`，不要再加 `Zhejiang`，以免侧栏换行溢出。
+- 位置：`Hangzhou, China`，不要再加 `Zhejiang`，以免侧栏换行溢出；尚未确认迁居，不提前改成 Heidelberg。
 - 研究主线：计算神经科学、结构神经影像、脑半球偏侧化、跨半球重建和生成模型。
-- News 按从新到旧排列；当前条目包括 2026、Jul 2025 加入 Cognomics Lab、Jul 2025 完成浙江大学心理学学士学位。
+- News 按从新到旧排列；最新条目为 Sep 2026 获海德堡大学 M.A. Computational Linguistics 录取（winter semester 2026/27），另保留 2026 项目开发和 Jul 2025 的既有条目。
+- Education 首项为 Heidelberg University, Master of Arts (M.A.) in Computational Linguistics, incoming, winter semester 2026/27；其次为浙江大学心理学学士经历。不推算毕业时间。
 - Research 当前有三个项目：
   1. Cross-Hemisphere Reconstruction-Derived Neuroanatomical Specificity in Schizophrenia：homepage 和 profile 均使用简洁表述，即 5 个站点、948 名受试者、ANS/RNS、多尺度组间差异、临床及认知关联和疾病分类；稿件状态为 `in preparation`。不要自行恢复主页此前展开的 Delta AUC 和 q 值。
   2. Cross-hemisphere reconstruction and handedness：研究重建残差与利手性的关系，状态为 `in preparation`。
