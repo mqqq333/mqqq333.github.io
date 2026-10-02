@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "MA Qi"
   avatar           : "images/photo.png"
-  bio              : "Incoming M.A. Student in Computational Linguistics, Heidelberg University."
+  bio              : "Incoming M.A. Student in Computational Linguistics, <a href='https://www.cl.uni-heidelberg.de/english/'>Heidelberg University</a>."
   location         : "Hangzhou, China"
   pubmed           : 
   googlescholar    :

@@ -1,8 +1,13 @@
 # MA Qi Homepage and Profile Handoff
 
-更新时间：2026-10-02（Asia/Shanghai）
+更新时间：2026-10-03（Asia/Shanghai）
 
 这份文档是下一次继续修改个人 homepage 和 GitHub profile README 时的入口。先阅读本文件，再检查两个仓库的工作树；不要根据记忆重建内容。
+
+## 2026-10-03 大学名称链接
+
+- 用户指定公开页面中的 Zhejiang University 链接为 `http://www.psych.zju.edu.cn/psychen/main.htm`，Heidelberg University 链接为 `https://www.cl.uni-heidelberg.de/english/`。
+- homepage 简介、News、Education、侧栏以及 profile 顶部、About、Education 中的可见大学名称均使用上述院系链接；录取学位核对所用的官方项目页仍作为本文件的历史证据来源。
 
 ## 2026-10-02 海德堡大学录取信息更新
 
