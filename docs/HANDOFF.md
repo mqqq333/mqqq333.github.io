@@ -4,6 +4,12 @@
 
 这份文档是下一次继续修改个人 homepage 和 GitHub profile README 时的入口。先阅读本文件，再检查两个仓库的工作树；不要根据记忆重建内容。
 
+## 2026-10-18 简历可视化项目日期与 Claude 审核
+
+- 按用户确认，将可视化 Codex Skills 项目改为 2026 年 5 月至 8 月，英文对应 May 2026–Aug 2026；HemiSpec 的进行中日期与其他内容不改。修改前快照分别为源稿仓库 `resume-before-visualization-date-20261018` 和本仓库 `cv-before-visualization-date-20261018`。
+- 按要求完成本机 Claude Code Sonnet 5.5 只读审核，成功返回及模型元数据均确认 `claude-sonnet-5-5`。完整意见和主代理复核保存在外部唯一源稿仓库的 `RESUME_REVIEW_20261018.md`，原始返回留在其 Git 忽略的 `.omx/artifacts/`；不将审核输入或临时文件加入网站仓库，亦未自动应用需要事实核实的建议。
+- 中英文各两页，源稿定向差异、四页渲染、PDF 副本与构建输出哈希均通过；主页替代构建仅有旧 Sass 弃用警告。仅本地提交与同步，不推送、不部署，主页正文、Profile 与原有未跟踪文件保持原状。
+
 ## 2026-10-18 简历栏目顺序与标题调整
 
 - N-back / DecodeWM 移至项目经历末尾，以项目名称和一条实践说明呈现，仍明确为 Neuromatch Academy 课程项目，不恢复准确率或科研成果叙述。
