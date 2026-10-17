@@ -4,6 +4,14 @@
 
 这份文档是下一次继续修改个人 homepage 和 GitHub profile README 时的入口。先阅读本文件，再检查两个仓库的工作树；不要根据记忆重建内容。
 
+## 2026-10-18 简历审核建议落实
+
+- 用户同意后，唯一双语源稿已精简 LorewormGu、弱化无依据的能力宣传、明确工作职责，核实后补充 HemiSpec 源码安装/双语文档/pytest 测试交付物，并补入正文已有的 Linux、FreeIPA/SSSD、Slurm 技能；优化英文科研标题日期与表达。不添加准确参数量、新论文结果、R、TOEFL 日期或额外 Slurm 职责。
+- 所有既定日期、公众号 95 篇与新增 1,200+ 关注者、948 人及利手 AUC/p 值保持不变。N-back 仍为项目末尾的单条课程项目；科学传播仍在全部项目之后。算子矫正独立存档不改动。
+- 修改前快照为源稿仓库 `resume-before-review-edits-20261018`（`da30751`）和本仓库 `cv-before-review-edits-20261018`（`6b8eefc`）；详细文案与回滚流程见外部源稿仓库的 `RESUME_MAINTENANCE.md`。
+- 本次仅同步两份 `files/` 下载 PDF 与本地提交，不推送、不部署，不改主页正文、Profile 或原有未跟踪文件。验证：双语各两页、四页视觉检查、XeLaTeX 零溢出/欠满/缺字、按语言五处 PDF SHA-256 一致、主页下载链接不变，Jekyll 替代构建通过，仅保留原有 Sass 弃用警告。
+- 修改后的 Claude Code Sonnet 5.5 只读复核已成功，指定和实际模型一致，九个文件（含四图）全部读取成功；结论为“可以交付”，未见事实性或排版硬伤。外部审核没有重复执行构建或哈希验证。完整落实记录与主代理判断在外部源稿仓库 `RESUME_REVIEW_FOLLOWUP_20261018.md`，原始 CLI 证据在该仓库忽略的 `.omx/artifacts/`。
+
 ## 2026-10-18 简历可视化项目日期与 Claude 审核
 
 - 按用户确认，将可视化 Codex Skills 项目改为 2026 年 5 月至 8 月，英文对应 May 2026–Aug 2026；HemiSpec 的进行中日期与其他内容不改。修改前快照分别为源稿仓库 `resume-before-visualization-date-20261018` 和本仓库 `cv-before-visualization-date-20261018`。
