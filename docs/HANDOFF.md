@@ -4,6 +4,14 @@
 
 这份文档是下一次继续修改个人 homepage 和 GitHub profile README 时的入口。先阅读本文件，再检查两个仓库的工作树；不要根据记忆重建内容。
 
+## 2026-10-17 简历科研条目替换与算子矫正存档
+
+- 按用户新要求，将两份简历中的 Operator-Corrector 条目替换为精神分裂症研究，并同步 `files/MAQi_CV_en.pdf` 与 `files/MAQi_resume_cn.pdf`。研究事实沿用主页和 Profile 已有口径：5 个站点、948 人、多尺度组间差异、临床与认知关联、疾病分类，论文撰写中。不借用另一个 OC 项目的结果数字，也不推定起始月份。
+- 原 OC 中英文条目保存在外部简历仓库的 `archive/research/`；完整旧源稿与 PDF 固定于 `resume-before-schizophrenia-swap-20261017`。本仓库旧 PDF 固定于 `cv-before-schizophrenia-swap-20261017`，均不覆盖此前标签。
+- 此次只替换简历条目，主页 Research 正文和 Profile 的在研项目列表不改动。主页 PDF 继续通过既有同步脚本从同一源稿生成，不分别编辑。
+- 仅本地提交，不推送、不部署；原有未跟踪文件保持原状。
+- 验证：中英文各两页，当前 PDF 不再包含 OC 条目；独立存档正文与替换前原文一致，补回章节分隔空行后可还原原始源稿，其余经历未改动。PDF 四处副本及 Jekyll 构建输出哈希一致，使用既有替代命令构建通过，仅保留旧 Sass 弃用警告。新版本标签分别为源稿仓库 `resume-schizophrenia-20261017` 和本仓库 `cv-schizophrenia-20261017`。
+
 ## 2026-10-17 简历源稿与主页下载文件同步
 
 - 按用户要求，将 `files/MAQi_CV_en.pdf` 和 `files/MAQi_resume_cn.pdf` 与外部简历工作目录中的当前中英文稿同步；新增 FreeIPA / SSSD 身份迁移与四节点 Slurm 验收经历，只写已记录的成果。两份 PDF 均为两页。
