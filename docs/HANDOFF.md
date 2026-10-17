@@ -1,8 +1,17 @@
 # MA Qi Homepage and Profile Handoff
 
-更新时间：2026-10-03（Asia/Shanghai）
+更新时间：2026-10-17
 
 这份文档是下一次继续修改个人 homepage 和 GitHub profile README 时的入口。先阅读本文件，再检查两个仓库的工作树；不要根据记忆重建内容。
+
+## 2026-10-17 简历源稿与主页下载文件同步
+
+- 按用户要求，将 `files/MAQi_CV_en.pdf` 和 `files/MAQi_resume_cn.pdf` 与外部简历工作目录中的当前中英文稿同步；新增 FreeIPA / SSSD 身份迁移与四节点 Slurm 验收经历，只写已记录的成果。两份 PDF 均为两页。
+- 当前稿还包含完整基础教育经历，旧主页 PDF 没有；此次按当前稿同步，未额外改写这些内容。主页正文、News、Education、Profile 等均未改动，不代表这些区域与 PDF 的个人信息已经逐项统一。
+- 外部简历工作目录现在有独立的本地 Git 仓库；唯一源稿是 `resume-zh_CN.tex` 与 `resume_en.tex`。在该目录运行 `powershell -NoProfile -ExecutionPolicy Bypass -File .\sync-homepage-resume.ps1 -Build` 可重新编译并同步，`-Check` 可只读核对主页链接及 PDF 副本 SHA-256。详细流程与两种回滚边界见该目录的 `RESUME_MAINTENANCE.md`。不要分别维护主页 PDF，也不要将整个源稿目录加入公开仓库。
+- 本仓库标签 `cv-before-sync-20261017` 保存同步前的公开 PDF；`cv-synced-20261017` 保存此次同步版本。仅恢复旧公开文件可运行 `git restore --source=cv-before-sync-20261017 -- files/MAQi_CV_en.pdf files/MAQi_resume_cn.pdf`，检查后显式提交；不要使用全仓库 `reset --hard`。
+- 本次仅在本机同步和提交，未推送、未触发部署，也未改动原有三个未跟踪路径。更早条目中的“CV 尚未重生成”是历史状态，以本节为准。
+- 验证：PowerShell 语法检查、同步前漂移拒绝、同步后四处 PDF 的 SHA-256 一致性、两页渲染、Git 旧源稿/旧 PDF 取回比对均通过。`bundle exec jekyll build` 仍因缺少既有 `wdm` 依赖失败；使用本文已记录的 `JEKYLL_NO_BUNDLER_REQUIRE=1` 替代命令构建成功，输出仅有旧模板的 Sass 弃用警告。
 
 ## 2026-10-03 大学名称链接
 
