@@ -12,6 +12,12 @@
 - 本次仅同步两份 `files/` 下载 PDF 与本地提交，不推送、不部署，不改主页正文、Profile 或原有未跟踪文件。验证：双语各两页、四页视觉检查、XeLaTeX 零溢出/欠满/缺字、按语言五处 PDF SHA-256 一致、主页下载链接不变，Jekyll 替代构建通过，仅保留原有 Sass 弃用警告。
 - 修改后的 Claude Code Sonnet 5.5 只读复核已成功，指定和实际模型一致，九个文件（含四图）全部读取成功；结论为“可以交付”，未见事实性或排版硬伤。外部审核没有重复执行构建或哈希验证。完整落实记录与主代理判断在外部源稿仓库 `RESUME_REVIEW_FOLLOWUP_20261018.md`，原始 CLI 证据在该仓库忽略的 `.omx/artifacts/`。
 
+## 2026-10-18 Gemini 4 Argon 复核与更新
+
+- 按用户要求，从本地 `E:\learn_pytorch\pythonProject\api_config\gemini_api.txt` 配置调用 `gemini-4-argon`；先用 `/v1/models` 核实模型，再用兼容的 `/v1/chat/completions` 审核。密钥未写入仓库。Gemini 的有效建议已落实到唯一双语源稿：ANS/RNS 展开、研究经历按时间倒序、精分目标时态、丘脑概念去重、英文复合修饰语、random forests、new followers 和英文 Skills & Languages 标题。
+- Gemini 关于“未来日期”、补 R/ PyTorch、补精分结果、第一作者和学术受众的推断没有事实依据，未采纳；LorewormGu 根据本地源码改为保守的可配置 KV 头数描述，未声称 GQA。TOEFL 原始 `5/6 (100/120)` 保留。
+- 主页两份 PDF 已重新同步；双语各两页，四页本地视觉复核和 XeLaTeX 警告检查通过，主页 PDF 与构建输出按语言一致。完整记录在外部源稿仓库 `RESUME_GEMINI_REVIEW_20261018.md`，没有推送或部署。
+
 ## 2026-10-18 简历可视化项目日期与 Claude 审核
 
 - 按用户确认，将可视化 Codex Skills 项目改为 2026 年 5 月至 8 月，英文对应 May 2026–Aug 2026；HemiSpec 的进行中日期与其他内容不改。修改前快照分别为源稿仓库 `resume-before-visualization-date-20261018` 和本仓库 `cv-before-visualization-date-20261018`。
@@ -327,3 +333,12 @@ git push origin master
 4. 先改 homepage，再按同步字段更新 profile。
 5. 运行构建、链接/图片扫描和桌面/移动端检查。
 6. 分别提交、推送，并复核两个公开 URL。
+
+## 11. 简历工作经历概述（2026-10-18）
+
+简历源稿仓库中的中英文工作经历首句已按用户最新偏好恢复为概括性表述：
+
+- 中文：开展认知神经科学与人工智能方法的交叉研究，尤其关注大脑半球偏侧化。
+- English: Conducting interdisciplinary research at the intersection of cognitive neuroscience and artificial intelligence, with a focus on brain hemispheric lateralization.
+
+主页下载 PDF 由同步脚本从该源稿重新生成；其他 Gemini 审核后修改保持不变。
